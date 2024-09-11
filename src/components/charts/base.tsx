@@ -28,7 +28,8 @@ export default function Base(): JSX.Element {
     return (
         <Fragment>
             <sup className={styles.attributions}>Thanks to Beargwyn for compiling all the data.</sup>
-            <p>Welcome to the "T90 Community Cup in Stats" website. This website collects all the statistics you could ever want to know about the tournament in one place!</p>
+            <sup className={styles.attributions}>Thanks to Salytmacska for creating the website layout.</sup>
+            <p>Welcome to the "Tiny Community Cup in Stats" website. This website collects all the statistics you could ever want to know about the tournament in one place!</p>
             <p>The data, by default summarizes the entire tournament (as of 2024.08.12). Use the filters on the toolbar to view the data pertaining to a particular group, map or bracket.</p>
             <p>So let's jump in with the most encompassing stats first:</p>
             {isFilterApplied ?
@@ -59,7 +60,7 @@ export default function Base(): JSX.Element {
             <p>Who is the fastest player in the tournament? We can see the eAPM over all brackets</p>
             <ApmChart gamesData={gamesData.filter(game => game.map != null)} filter={filter}></ApmChart>
             <hr></hr>
-            Thanks for checking out T90 Community Cup in Stats!
+            Thanks for checking out Tiny Community Cup in Stats!
         </Fragment>
     );
 }

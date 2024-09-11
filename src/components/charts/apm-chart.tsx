@@ -1,24 +1,25 @@
 import { Scatter } from "react-chartjs-2";
 import { Chart, PointElement } from 'chart.js'
 import useDelayedColorMode from "@site/src/utils/use-delayed-color-mode";
+import { BracketNameToImage } from "@site/src/data/mapping";
 
 Chart.register(PointElement);
 
-const bracketOrder = ['Champion', 'Monks', 'Mangonels', 'Knights', 'Light Cavs', 'Pikemen', 'Longswords', 'Crossbows', 'Skirms', 'Spearmen', 'Archers', 'Militia'] as const;
-type Bracket = typeof bracketOrder[number];
+type Bracket = keyof typeof BracketNameToImage
+const bracketOrder = Object.keys(BracketNameToImage) as Bracket[];
 const bracketColors: { [bracket in Bracket]: string } = {
-    Champion: "#1f77b4",
-    Monks: "#ff7f0e",
-    Mangonels: "#2ca02c",
-    Knights: "#d62728",
-    "Light Cavs": "#9467bd",
-    Pikemen: "#8c564b",
-    Longswords: "#e377c2",
-    Crossbows: "#7f7f7f",
-    Skirms: "#bcbd22",
-    Spearmen: "#17becf",
-    Archers: "#0c5f68",
-    Militia: "#680c5f"
+    Itiiti: "#1f77b4",
+    Mejen: "#ff7f0e",
+    Ixpitzahuac: "#2ca02c",
+    "Huch'uy": "#d62728",
+    Yáhzí: "#9467bd",
+    Mirĩ: "#8c564b",
+    Smalr: "#e377c2",
+    maľúčký: "#7f7f7f",
+    parvus: "#bcbd22",
+    apro: "#17becf",
+    // Archers: "#0c5f68",
+    // Militia: "#680c5f"
 };
 
 export default function ApmChart({ gamesData }: { gamesData: any[] }): JSX.Element {
@@ -32,7 +33,7 @@ export default function ApmChart({ gamesData }: { gamesData: any[] }): JSX.Eleme
     });
     const datasets = bracketOrder.map((bracket, index) => ({
         label: bracket,
-        data: bracketApm.get(bracket).map(eapm => ({
+        data: (bracketApm.get(bracket) ?? []).map(eapm => ({
             x: Math.random() * 0.4 + 0.4,
             y: eapm,
         })),
