@@ -28,7 +28,7 @@ export const BracketNameToImage = {
     Ixpitzahuac: null,
     "Huch'uy": null,
     "Yáhzí": null,
-    "Mirĩ": null,
+    mirĩ: null,
     Smalr: null,
     "maľúčký": null,
     parvus: null,

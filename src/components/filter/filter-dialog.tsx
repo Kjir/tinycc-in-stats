@@ -78,6 +78,7 @@ export default function FilterDialog(): JSX.Element {
             <div className={styles['map-container']}>
                 {Object.entries(GameNameMappingToDisplayName).map(([mapGameName, mapDisplayName]) =>
                     <FilterMapItem
+                        key={mapGameName}
                         imageSrc={useBaseUrl(`/img/maps/${mapGameName.replace(/ /g, "_")}.png`)}
                         value={filter.maps.includes(mapGameName)}
                         onChange={onMapFilterChange.bind(this, mapGameName)}
@@ -89,6 +90,7 @@ export default function FilterDialog(): JSX.Element {
             <div className={styles['map-container']}>
                 {Object.entries(BracketNameToImage).map(([bracketName, bracketImage]) =>
                     <FilterBracketItem
+                        key={bracketName}
                         imageSrc={bracketImage ? useBaseUrl('/img/brackets/Champion.webp') : undefined}
                         value={filter.brackets.includes(bracketName)}
                         onChange={onBracketFilterChange.bind(this, bracketName)}
@@ -101,6 +103,7 @@ export default function FilterDialog(): JSX.Element {
             <div className={styles['map-container']}>
                 {allStages.map(stage =>
                     <FilterStageItem
+                        key={stage}
                         value={filter.stages.includes(stage)}
                         onChange={onStageFilterChange.bind(this, stage)}
                         name={stage} />
