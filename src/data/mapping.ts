@@ -1,3 +1,4 @@
+export const acceptableMisnamedMaps = {};
 export const mapDraftNameToGameNameMapping = {
     "african-reed-beds": 'Small African Reed Beds',
     "coast-to-mountain": 'Small Coast to Mountain',
