@@ -23,11 +23,11 @@ export const GameNameMappingToDisplayName = {
 };
 
 export const BracketNameToImage = {
-    Itiiti: null,
-    Mejen: null,
-    Ixpitzahuac: null,
-    "Huch'uy": null,
-    "Yáhzí": null,
+    itiiti: null,
+    mejen: null,
+    ixpitzahuac: null,
+    "huch'uy": null,
+    "yáhzí": null,
     mirĩ: null,
     Smalr: null,
     "maľúčký": null,
