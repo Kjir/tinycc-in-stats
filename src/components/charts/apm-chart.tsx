@@ -8,12 +8,12 @@ Chart.register(PointElement);
 type Bracket = keyof typeof BracketNameToImage
 const bracketOrder = Object.keys(BracketNameToImage) as Bracket[];
 const bracketColors: { [bracket in Bracket]: string } = {
-    Itiiti: "#1f77b4",
-    Mejen: "#ff7f0e",
-    Ixpitzahuac: "#2ca02c",
-    "Huch'uy": "#d62728",
-    Yáhzí: "#9467bd",
-    Mirĩ: "#8c564b",
+    itiiti: "#1f77b4",
+    mejen: "#ff7f0e",
+    ixpitzahuac: "#2ca02c",
+    "huch'uy": "#d62728",
+    yáhzí: "#9467bd",
+    mirĩ: "#8c564b",
     Smalr: "#e377c2",
     maľúčký: "#7f7f7f",
     parvus: "#bcbd22",
